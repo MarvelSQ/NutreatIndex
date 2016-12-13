@@ -10,6 +10,8 @@ var nutrist_ios=document.getElementById('nutrist-iload')
 window.onload=function () {
     tops=0
     if(isWeiXin()){
+        user_android.parentNode.href="javascript:void(0);"
+        nutrist_android.parentNode.href="javascript:void(0);"
         user_android.addEventListener('click',function () {
             jumptoUser()
         })
@@ -30,7 +32,6 @@ window.onscroll=function(){
 }
 function isWeiXin(){
     var ua = window.navigator.userAgent.toLowerCase();
-
     if(ua.match(/MicroMessenger/i) == 'micromessenger'){
         return true;
     }else{
